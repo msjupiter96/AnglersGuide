@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/msjupiter96/AnglersGuide/static/css/main.cfee011f.chunk.css",
+    "main.js": "/msjupiter96/AnglersGuide/static/js/main.9cab6fd3.chunk.js",
+    "main.js.map": "/msjupiter96/AnglersGuide/static/js/main.9cab6fd3.chunk.js.map",
+    "runtime-main.js": "/msjupiter96/AnglersGuide/static/js/runtime-main.4c20f339.js",
+    "runtime-main.js.map": "/msjupiter96/AnglersGuide/static/js/runtime-main.4c20f339.js.map",
+    "static/js/2.9febd06c.chunk.js": "/msjupiter96/AnglersGuide/static/js/2.9febd06c.chunk.js",
+    "static/js/2.9febd06c.chunk.js.map": "/msjupiter96/AnglersGuide/static/js/2.9febd06c.chunk.js.map",
+    "static/js/3.ba683d30.chunk.js": "/msjupiter96/AnglersGuide/static/js/3.ba683d30.chunk.js",
+    "static/js/3.ba683d30.chunk.js.map": "/msjupiter96/AnglersGuide/static/js/3.ba683d30.chunk.js.map",
+    "index.html": "/msjupiter96/AnglersGuide/index.html",
+    "static/css/main.cfee011f.chunk.css.map": "/msjupiter96/AnglersGuide/static/css/main.cfee011f.chunk.css.map",
+    "static/js/2.9febd06c.chunk.js.LICENSE.txt": "/msjupiter96/AnglersGuide/static/js/2.9febd06c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c20f339.js",
+    "static/js/2.9febd06c.chunk.js",
+    "static/css/main.cfee011f.chunk.css",
+    "static/js/main.9cab6fd3.chunk.js"
+  ]
+}

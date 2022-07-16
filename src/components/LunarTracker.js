@@ -120,9 +120,9 @@ const LunarTracker = () => {
         } else if (moonphase === "Waning Gibbous") {
             url = "moon_icons/png/006-waning-moon.png";
         } else if (moonphase === "Last Quarter") {
-            url = "/moon_icons/png/007-crescent-moon.png";
+            url = "moon_icons/png/007-crescent-moon.png";
         } else {
-            url = "/moon_icons/png/006-waning-moon.png";
+            url = "moon_icons/png/006-waning-moon.png";
         };
 
         return url;

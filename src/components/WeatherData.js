@@ -71,31 +71,31 @@ const AppContents = () => {
         let identifier = weathercode.charAt(0);
         if (identifier === '2'){
             // thunderstorm icons
-            url = '/weather_icons/images/thunderstorm.png';
+            url = 'images/thunderstorm.png';
         } else if (identifier === '3'){
             // drizzle icons
-            url = '/weather_icons/images/rain-sun.png';
+            url = 'images/rain-sun.png';
         } else if (identifier === '5'){
             // rain icons
-            url = '/weather_icons/images/rainy.png';
+            url = 'images/rainy.png';
         } else if (identifier === '6'){
             // snow icons
-            url = '/weather_icons/images/snowing.png';
+            url = 'images/snowing.png';
         } else if (identifier === '7'){
             // atmospheric icons
-            url = '/weather_icons/images/dark-clouds.png';
+            url = 'images/dark-clouds.png';
         } else if (identifier === '8'){
             // test whether clear of cloudy
             if (weathercode === '800'){
                 // clear icon
-                url = '/weather_icons/images/sunny.png';
+                url = 'images/sunny.png';
             } else{
                 //cloudy icon
-                url = '/weather_icons/images/dark-clouds.png';
+                url = 'images/dark-clouds.png';
             }
         } else{
             // no identifiers matched
-            url = '/weather_icons/images/sunny.png';
+            url = 'images/sunny.png';
         };
         return url;
     }

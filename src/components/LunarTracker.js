@@ -108,17 +108,17 @@ const LunarTracker = () => {
         let url = "";
 
         if (moonphase === 'New') {
-            url = "/moon_icons/png/001-new-moon.png";
+            url = "moon_icons/png/001-new-moon.png";
         } else if (moonphase === "Waxing Crescent") {
-            url = "/moon_icons/png/002-waxing-moon.png";
+            url = "moon_icons/png/002-waxing-moon.png";
         } else if (moonphase === "First Quarter") {
-            url = "/moon_icons/png/003-first-quarter.png";
+            url = "moon_icons/png/003-first-quarter.png";
         } else if (moonphase === "Waxing Gibbous") {
-            url = "/moon_icons/png/004-waxing-moon-1.png";
+            url = "moon_icons/png/004-waxing-moon-1.png";
         } else if (moonphase === "Full") {
-            url = "/moon_icons/png/005-moon.png";
+            url = "moon_icons/png/005-moon.png";
         } else if (moonphase === "Waning Gibbous") {
-            url = "/moon_icons/png/006-waning-moon.png";
+            url = "moon_icons/png/006-waning-moon.png";
         } else if (moonphase === "Last Quarter") {
             url = "/moon_icons/png/007-crescent-moon.png";
         } else {

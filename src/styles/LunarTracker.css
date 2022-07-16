@@ -1,0 +1,74 @@
+.lunar-card-container{
+    background-color: rgba(0, 0, 0, 0.062);
+    width: 90%;
+    height: auto;
+    box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 1px 1px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 1px -1px hsla(0,0%,0%,0.12), 
+		0px 1px 1px 0px hsla(0,0%,0%,0.2);
+    padding-bottom: 1em;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.date-container {
+    font-family: 'Lato', sans-serif;
+}
+
+.lunar-phase-title {
+    font-size: 2em;
+    padding-top: 1em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.moon-icon{
+    width: 5em;
+    margin: 0 auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+.current-phase-text {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+
+/* DEKSTOP VIEW  */
+@media screen and (min-device-width: 1025px) {
+    .lunar-card-container{
+        width: 100%;
+        padding-left: 4em;
+        padding-right: 4em;
+        height: 91.4%;
+        margin-right: 0.3em;
+    }
+
+    .lunar-phase-title{
+        padding-top: 1.3em;
+        font-size: 2.8em;
+    }
+
+    .activity-level{
+        padding: 0;
+        padding-top: 0;
+    }
+
+    .moon-icon{
+        height: 14%;
+        width: 19%;
+        padding-top: 0em;
+    }
+
+    .date-container{
+        font-size: 1.5em;
+    }
+}

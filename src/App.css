@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+
+
+
+.main-components{
+  width: 100%;
+  padding: 0;
+  background-color: #234157;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+}
+
+
+
+/* DEKSTOP VIEW  */
+@media screen and (min-device-width: 1025px) {
+  .main-components{
+    flex-direction: row;
+  }
+  
+  body, html{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,16 @@
+
+
+
+.button-container button{
+    padding: 1em 2em 1em 2em;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(155, 89, 182);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-container button:active{
+    transform: scale(0.98);
+}

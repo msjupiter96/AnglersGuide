@@ -1,0 +1,103 @@
+
+.pressure-checking-machine{
+    background-color: rgba(0, 0, 0, 0.062);
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 1px 1px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 1px -1px hsla(0,0%,0%,0.12), 
+		0px 1px 1px 0px hsla(0,0%,0%,0.2);
+    margin: 0 auto;
+    margin-top: 2.5em;
+}
+
+.pressure-title{
+    padding-top: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pressure-checking-machine p{
+    font-size: 1.5em;
+    padding-top: 0.2em;
+    font-family: 'Lato', sans-serif;
+}
+
+.pressure-checking-machine h2{
+    padding: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.barometer-icon{
+    width: 20%;
+    margin: 0 auto;
+}
+
+
+/* Styles for change in pressure text */
+.rising{
+    color: red;
+}
+
+.falling{
+    color: green;
+}
+
+.steady{
+    color: white;
+}
+
+.six-hour-change{
+    padding: 0;
+    margin: 0 auto;
+}
+
+.nine-hour-change{
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+/* DEKSTOP VIEW  */
+@media screen and (min-device-width: 1025px){
+    .pressure-checking-machine{
+        height: 100%;
+        width: 75%;
+        margin: 0;
+        margin-left: 8em;
+    }
+
+    .barometer-icon{
+        height: 21%;
+        width: 21%;
+    }
+    
+    .pressure-checking-machine h2{
+        font-size: 1.8em;
+        padding: 0;
+    }
+
+    .pressure-checking-machine p{
+        font-size: 1.5em;
+        padding-top: 0.2em;
+    }
+
+    .pressure-checking-machine h1{
+        padding-top: 1em;
+        font-size: 2.4em;
+    }
+
+
+
+}
+
+
+/* Tablet View */
+@media screen and (min-device-width: 800px) {
+    .barometer-icon{
+        height: 15%;
+        width: 15%;
+    }
+}

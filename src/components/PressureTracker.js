@@ -15,6 +15,7 @@ const PressureTracker = (props) => {
     let convertendb = convertToMercury(endb);
     let fontcolora = { color: 'white' };
     let fontcolorb = { color: 'white' };
+    const Logobar = require('../images/barometer.png').default;
     
   
     function setPressure(){
@@ -81,8 +82,8 @@ const PressureTracker = (props) => {
     return(
         // html to return
         <div className="pressure-checking-machine">
-            <h1 className="pressure-title">Air Pressure: </h1>
-            <img className="barometer-icon" src="/weather_icons/images/barometer.png" alt="Barometer Icon"></img>
+            <h1 className="pressure-title">Air Pressure</h1>
+            <img className="barometer-icon" src={Logobar} alt="Barometer Icon"></img>
             <p className="pressure-change-value">6 Hours</p>
             <h2 className="six-hour-change" style={fontcolora}>ΔP {differenceresultthree} inHg </h2>
             <p className="pressure-change-value">9 Hours</p>

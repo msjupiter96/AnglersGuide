@@ -8,6 +8,14 @@ const LunarTracker = () => {
     const [moonphase, setMoonPhase] = useState("");
     const [moonicon, setMoonIcon] = useState("");
     const [currentdate, setCurrentDate] = useState("");
+    // images
+    const Newmoon = require('../images/001-new-moon.png').default;
+    const Waxingcrescent = require('../images/002-waxing-moon.png').default;
+    const Firstquarter = require('../images/003-first-quarter.png').default;
+    const Waxinggibbous = require('../images/004-waxing-moon-1.png').default;
+    const Fullmoon = require('../images/005-moon.png').default;
+    const Waninggibbous = require('../images/006-waning-moon.png').default;
+    const Lastquarter = require('../images/007-crescent-moon.png').default;
 
 
     // Initialize data in component once component is loaded
@@ -27,16 +35,12 @@ const LunarTracker = () => {
         let organizeddate = "";
         // returns month with 0-11, with 1 added to make 1-12
         month = newdate.getMonth() + 1;
-        console.log("Month: " + month);
         // returns 4 digit year
         year = newdate.getFullYear();
-        console.log("Year: " + year);
         // returns 2 digit day
         day = newdate.getDate();
-        console.log("Day: " + day);
         organizeddate = month.toString() + "/" + day.toString() + "/" + year.toString();
         setCurrentDate(organizeddate);
-        console.log(currentdate);
 
         // establish julian date variables
         let c = 0;
@@ -64,35 +68,27 @@ const LunarTracker = () => {
         // update phase based on result
         // also use callback function to get url for correct moon icon based on current phase
         if (b === 0) {
-            console.log("New moon");
             setMoonPhase("New");
             setMoonIcon(assignIcon("New"));
         } else if (b === 1) {
-            console.log("Waxing Crescent");
             setMoonPhase("Waxing Crescent");
             setMoonIcon(assignIcon("Waxing Crescent"));
         } else if (b === 2) {
-            console.log("Fist Quarter");
             setMoonPhase("First Quarter");
             setMoonIcon(assignIcon("First Quarter"));
         } else if (b === 3) {
-            console.log("Waxing Gibbous");
             setMoonPhase("Waxing Gibbous");
             setMoonIcon(assignIcon("Waxing Gibbous"));
         } else if (b === 4) {
-            console.log("Full moon");
             setMoonPhase("Full");
             setMoonIcon(assignIcon("Full"))
         } else if (b === 5) {
-            console.log("Waning Gibbous");
             setMoonPhase("Waning Gibbous");
             setMoonIcon(assignIcon("Waning Gibbous"));
         } else if (b === 6) {
-            console.log("Last Quarter");
             setMoonPhase("Last Quarter");
             setMoonIcon(assignIcon("Last Quarter"));
         } else if (b === 7) {
-            console.log("Waning Crescent");
             setMoonPhase("Waning Crescent");
             setMoonIcon(assignIcon("Waning Crescent"));
         };
@@ -105,27 +101,27 @@ const LunarTracker = () => {
 
     // Assign url of proper icon based on current phase
     function assignIcon(moonphase) {
-        let url = "";
+        let currentphaseicon;
 
         if (moonphase === 'New') {
-            url = "/moon_icons/png/001-new-moon.png";
+            currentphaseicon = Newmoon;
         } else if (moonphase === "Waxing Crescent") {
-            url = "/moon_icons/png/002-waxing-moon.png";
+            currentphaseicon = Waxingcrescent;
         } else if (moonphase === "First Quarter") {
-            url = "/moon_icons/png/003-first-quarter.png";
+            currentphaseicon = Firstquarter;
         } else if (moonphase === "Waxing Gibbous") {
-            url = "/moon_icons/png/004-waxing-moon-1.png";
+            currentphaseicon = Waxinggibbous;
         } else if (moonphase === "Full") {
-            url = "/moon_icons/png/005-moon.png";
+            currentphaseicon = Fullmoon;
         } else if (moonphase === "Waning Gibbous") {
-            url = "/moon_icons/png/006-waning-moon.png";
+            currentphaseicon = Waninggibbous;
         } else if (moonphase === "Last Quarter") {
-            url = "/moon_icons/png/007-crescent-moon.png";
+            currentphaseicon = Lastquarter;
         } else {
-            url = "/moon_icons/png/006-waning-moon.png";
+            currentphaseicon = Waninggibbous;
         };
 
-        return url;
+        return currentphaseicon;
     };
 
 
@@ -135,7 +131,7 @@ const LunarTracker = () => {
         <div className="lunar-card-container">
             <p className="lunar-phase-title">Lunar Phase</p>
             <div>
-                <img className="moon-icon" src={moonicon} alt="Icon of Moon Phase"></img>
+                <img className="moon-icon" src={moonicon} key={moonphase} alt="Icon of Moon Phase"></img>
             </div>
             <p className="current-phase-text">{moonphase}</p>
             <p className="date-container">{currentdate}</p>

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AnglersGuide/static/css/main.f0064ed8.chunk.css",
+    "main.css": "/AnglersGuide/static/css/main.dff08496.chunk.css",
     "main.js": "/AnglersGuide/static/js/main.f22a61e9.chunk.js",
     "main.js.map": "/AnglersGuide/static/js/main.f22a61e9.chunk.js.map",
     "runtime-main.js": "/AnglersGuide/static/js/runtime-main.83ec74ea.js",
@@ -10,14 +10,14 @@
     "static/js/3.188c57d8.chunk.js": "/AnglersGuide/static/js/3.188c57d8.chunk.js",
     "static/js/3.188c57d8.chunk.js.map": "/AnglersGuide/static/js/3.188c57d8.chunk.js.map",
     "index.html": "/AnglersGuide/index.html",
-    "static/css/main.f0064ed8.chunk.css.map": "/AnglersGuide/static/css/main.f0064ed8.chunk.css.map",
+    "static/css/main.dff08496.chunk.css.map": "/AnglersGuide/static/css/main.dff08496.chunk.css.map",
     "static/js/2.a4f92cbd.chunk.js.LICENSE.txt": "/AnglersGuide/static/js/2.a4f92cbd.chunk.js.LICENSE.txt",
     "static/media/barometer.png": "/AnglersGuide/static/media/barometer.2f1cfe71.png"
   },
   "entrypoints": [
     "static/js/runtime-main.83ec74ea.js",
     "static/js/2.a4f92cbd.chunk.js",
-    "static/css/main.f0064ed8.chunk.css",
+    "static/css/main.dff08496.chunk.css",
     "static/js/main.f22a61e9.chunk.js"
   ]
 }

@@ -9,10 +9,10 @@ import Footer from '../components/Footer.js';
 const AppContents = () => {
     // State variables for program located here
     const [cityname, setCity] = useState('Seattle');
-    const [currenttemp, setTemp] = useState('29.15°');
+    const [currenttemp, setTemp] = useState('60°');
     const [weathercode, setWeatherCode] = useState('800');
     const [weatherlink, setWeatherLink] = useState(require('../images/sunny.png').default);
-    const [currentdecription, setDescription] = useState('Overcast');
+    const [currentdecription, setDescription] = useState('Sunny');
     const [windspeed, setWind] = useState('2.25mph');
     const [userInput, setSearchValue] = useState('Seattle');
     const [startingPressure, setStartPressure] = useState(0);
@@ -64,7 +64,22 @@ const AppContents = () => {
         };
 
         return result;
-    }, [weathercode])
+    }, [weathercode, Darkcloud, Drizzle, Rain, Snow, Sunny, Thunderstorm])
+    
+
+    // Function sets the first letter of each word to an uppercase letter
+    function capitalizeWords(original) {
+        let words = original.split(" ");
+        // loop through words and capitalize
+        for (let i = 0; i < words.length; i++) {
+            // combine capitalized letter with rest of word
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1) + " ";
+        };
+        // combine words back together
+        words.join();
+        return words;
+    }
+
 
 
     // This side-effect checks to see if the image has been updated after fetching the data
@@ -80,12 +95,9 @@ const AppContents = () => {
 
 
     const fetchWeatherJSON = async () => {
-        fetch("https://community-open-weather-map.p.rapidapi.com/forecast?q=" + userInput + "%2Cus&units=imperial", {
+        const a = "b7c65c655ba222bd25122964bd56d8ae";
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + cityname + "&appid=" + a + "&units=imperial", {
         "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-            "x-rapidapi-key": "b5f5e3e434mshaaf4a42ec34cc73p1320b3jsn614676da6c86",
-        }
         }).then(response => {
             if (response.ok) {
                 return response.json()
@@ -95,14 +107,15 @@ const AppContents = () => {
         })
         .then(data => {
             WeatherData = data;
-            setCity(WeatherData.city.name);
+            console.log(WeatherData)
+            setCity(userInput);
             setStartPressure(WeatherData.list[0].main.pressure);
             setEndPressure(WeatherData.list[2].main.pressure);
             setStartPressureB(WeatherData.list[0].main.pressure);
             setEndingPressureB(WeatherData.list[3].main.pressure);
-            setTemp(WeatherData.list[0].main.temp + '°F');
+            setTemp(Math.round(WeatherData.list[0].main.temp) + '°F');
             setWeatherCode(WeatherData.list[0].weather[0].id.toString());
-            setDescription(WeatherData.list[0].weather[0].description);
+            setDescription(capitalizeWords(WeatherData.list[0].weather[0].description));
             setWind(WeatherData.list[0].wind.speed.toString() + ' mph');
             setImageKey(WeatherData.list[0].weather[0].id);
             return WeatherData;
@@ -141,7 +154,7 @@ const AppContents = () => {
         <div className='weather-card-wrapper'>
             <h1>Enter City Name </h1>
             <input type="text" name="submit" onChange={getUserInput} className="user-search"></input>
-            <button onClick={() => {fetchWeatherJSON()}} className='search-button'>Search</button>
+            <button onClick={() => {fetchWeatherJSON()}} onKeyDown={(e) => {fetchWeatherJSON()}} className='search-button'>Search</button>
             <div className='app-sections'>
                 <div className="weather-data-return">
                     <h2>{cityname}</h2>

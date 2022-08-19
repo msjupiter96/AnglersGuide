@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AnglersGuide/static/css/main.f0064ed8.chunk.css",
-    "main.js": "/AnglersGuide/static/js/main.d9893275.chunk.js",
-    "main.js.map": "/AnglersGuide/static/js/main.d9893275.chunk.js.map",
+    "main.js": "/AnglersGuide/static/js/main.f22a61e9.chunk.js",
+    "main.js.map": "/AnglersGuide/static/js/main.f22a61e9.chunk.js.map",
     "runtime-main.js": "/AnglersGuide/static/js/runtime-main.83ec74ea.js",
     "runtime-main.js.map": "/AnglersGuide/static/js/runtime-main.83ec74ea.js.map",
     "static/js/2.a4f92cbd.chunk.js": "/AnglersGuide/static/js/2.a4f92cbd.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.83ec74ea.js",
     "static/js/2.a4f92cbd.chunk.js",
     "static/css/main.f0064ed8.chunk.css",
-    "static/js/main.d9893275.chunk.js"
+    "static/js/main.f22a61e9.chunk.js"
   ]
 }

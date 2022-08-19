@@ -140,6 +140,7 @@
 
     .weather-data-return h2{
         font-size: 2.5em;
+        padding-left: 0.087em;
         padding-top: 1em;
     }
 
